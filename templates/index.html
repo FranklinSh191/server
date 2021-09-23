@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+		#et1 {
+		margin-bottom: 10px;
+		background-color: limegreen;
+		font-size: 50px;
+		text-align: center;   
+		}	
+	</style>
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript">
 		
 	</script>
-
 	<script src="/static/js/index.js">
-		
 	</script>
 	<title>EMBEBIDOS</title>
 </head>
@@ -15,9 +22,10 @@
 	<h1 id='et1'>
 		FranklinSh
 	</h1>
-	<div>
-		<center>
-	<img id="imagen" src="https://lh3.googleusercontent.com/proxy/oRY-woYjSHPjX5xjp6Pj7asYdMS00kIQNVRxYG2d0a98duVWE-1LjBBURCkKe3XYqZdOFYY1KibWkZndTSQaQjpTUSyyUy1mdotL-OCWbJ83vbYQ6AKgAmd4inAty3naN6kfMQ" alt="user">
+	
+	<center>
+	<img id="imagen" width="300" height="300" src="https://www.kizoa.es/img/e8nZC.gif" alt="user">
+	<\center>	
 
 	<h1>
 		Sensor:
@@ -37,9 +45,7 @@
 	<button style="background-color: blue; color: white" id = 'LED1Off' type="button" onclick="LED1_Off();">
 		LED1_OFF!
 	</button>
-</center>
-</div>
-	
+		
 	<script>
 	/*
 	function LED1_On() {
