@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<style>
 		#et1 {
 		margin-bottom: 10px;
@@ -8,44 +9,50 @@
 		font-size: 50px;
 		text-align: center;   
 		}	
+
 	</style>
-	
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript">
-		
-	</script>
-	<script src="/static/js/index.js">
-	</script>
-	<title>EMBEBIDOS</title>
+
+	</script> 
+
+	<title>PROYECTO</title>
 </head>
+
 <body>
-
+	
 	<h1 id='et1'>
-		FranklinSh
+		SISTEMAS EMBEBIDOS
 	</h1>
-	
-	<center>
+<center> 
 	<img id="imagen" width="300" height="300" src="https://www.kizoa.es/img/e8nZC.gif" alt="user">
-	</center>	
-
-	<h1>
-		Sensor:
-	</h1>
-		
-	<h1 id="sensor">
-		--
-	</h1>
-	<h1 >
-		Frank
-	</h1>
+</center>
 	
-	<button style="background-color: red; color: white" id = 'LED1On' type="button" onclick="LED1_On();">
-		LED1 ON!
-	</button>
+	<h1 style="color: forestgreen;">Sensor 1: <h id="sensor1" style="color: white;"></h></h1>
+	<h1 style="color: forestgreen;">Sensor 2: <h id="sensor2" style="color: white;"></h></h1>
+	<h1 style="color: blueviolet;">Mensaje: <input id="enviarmensaje" name="enviarmensaje" type="text" minlength="1" size="35" /></h1>
+	<h1 style="color: limegreen;">Mensaje en el Broker: <h id="recibido" style="color: blue;"></h></h1>
+	
+	<h1 style="color: orangered; text-align: left;"><img src="https://img2.freepng.es/20180702/psj/kisspng-empty-set-symbol-computer-icons-mathematics-5b3a5420ac06d5.8373731615305492807046.jpg" alt="led" id="led" width="50" height="50" />LED: <h id="estado" style="color: black;"></h></h1>
 
-	<button style="background-color: blue; color: white" id = 'LED1Off' type="button" onclick="LED1_Off();">
-		LED1_OFF!
-	</button>
-		
+
+	<p style="text-align: center;">
+		<button id="LED1 On" style="background-color: blue; color: black; border-radius: 15px; border-color: white; border-width: 2px; font-weight: 800; font-size: 15px; padding: 15px 30px; box-shadow: 0 6px 16px 0 rgba(0,0,0,0.20), 0 6px 20px 0 rgba(0,0,0,0.16); transition-duration: 0.4s;" type="button" onclick="LED1_On()">Encender
+		</button> 
+
+		<button id="LED1 Off" style="background-color: red; color: black; border-radius: 15px; border-color: white; border-width: 2px; font-weight: 800; font-size: 15px; padding: 15px 30px; box-shadow: 0 6px 16px 0 rgba(0,0,0,0.20), 0 6px 20px 0 rgba(0,0,0,0.16); transition-duration: 0.4s;" type="button" onclick="LED1_Off()">Apagar
+		</button>
+
+		<button id="enviar" style="background-color: orange; color: black; border-radius: 15px; border-color: white; border-width: 2px; font-weight: 800; font-size: 15px; padding: 15px 20px; box-shadow: 0 6px 16px 0 rgba(0,0,0,0.20), 0 6px 20px 0 rgba(0,0,0,0.16); transition-duration: 0.4s;" type="button" onclick="enviarmsg();">Enviar Mensaje
+		</button>
+
+	</p>
+
+	<p style="text-align: center;">
+		</p>
+	
+	
+
 	<script>
 	/*
 	function LED1_On() {
@@ -59,5 +66,8 @@
 	}
 	*/
 	</script>
+
+	<script src="/static/js/index.js"> </script>
+
 </body>
 </html>
